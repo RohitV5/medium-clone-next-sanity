@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "npm start --prefix mediumapp",
+    "dev2":"concurrently \"npm run server\" \"npm run dev \""
   },
   "dependencies": {
     "next": "latest",
