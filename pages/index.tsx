@@ -9,7 +9,6 @@ interface Props {
 }
 
 export default function Home({ posts }: Props) {
-  console.log(posts);
   return (
     <div className="mx-auto max-w-7xl">
       <Head>
@@ -39,12 +38,12 @@ export default function Home({ posts }: Props) {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6">
+      <div className="grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 md:p-6">
         {posts.map((post) => (
-          <Link key={post._id} href={`posts/${post.slug.current}`}>
-            <div className="group cursor-pointer border rounded-lg overflow-hidden">
+          <Link key={post._id} href={`post/${post.slug.current}`}>
+            <div className="overflow-hidden border rounded-lg cursor-pointer group">
               <img
-                className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                className="object-cover w-full transition-transform duration-200 ease-in-out h-60 group-hover:scale-105"
                 src={urlFor(post.mainImage).url()!}
                 alt=""
               />
@@ -58,7 +57,7 @@ export default function Home({ posts }: Props) {
 
                 <img
                   src={urlFor(post.author.image).url()!}
-                  className="h-12 w-12 rounded-full"
+                  className="w-12 h-12 rounded-full"
                 />
               </div>
             </div>
