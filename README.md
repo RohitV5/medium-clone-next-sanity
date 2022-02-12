@@ -6,4 +6,4 @@ Init Command - npx create-next-app --example with-tailwindcss .
 
 ISR - Incremental Static Regeneration - Cached page which refreshed every 60 second to get best performance compared to SSR. SSG once generated do not get updated until build again.
 
-             1:24
+             2:13 Next Up React-Hook-Form
